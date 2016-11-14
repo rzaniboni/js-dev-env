@@ -15,10 +15,18 @@ app.use(require('webpack-dev-middleware')(compiler, {
     publicPath: config.output.publicPath
 }));
 
-
-
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../src/index.html'));
+});
+
+app.get('/users', function(req, res) {
+    res.json([
+        { id: 1, "fistName": "Roberto", "lastName": "Za", "email": "bob@gmail.com"},
+        { id: 2, "fistName": "Guglielmo", "lastName": "Alberto", "email": "bob@gmail.com"},
+        { id: 3, "fistName": "Daniela", "lastName": "Foschieri", "email": "bob@gmail.com"},
+        { id: 4, "fistName": "Eugenio", "lastName": "Smith", "email": "bob@gmail.com"},
+        { id: 5, "fistName": "Vanessa", "lastName": "Vivolo", "email": "bob@gmail.com"}      
+    ]);
 });
 
 app.listen(port, function(err) {
