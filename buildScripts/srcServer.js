@@ -21,11 +21,11 @@ app.get('/', function(req, res) {
 
 app.get('/users', function(req, res) {
     res.json([
-        { id: 1, "fistName": "Roberto", "lastName": "Za", "email": "bob@gmail.com"},
-        { id: 2, "fistName": "Guglielmo", "lastName": "Alberto", "email": "bob@gmail.com"},
-        { id: 3, "fistName": "Daniela", "lastName": "Foschieri", "email": "bob@gmail.com"},
-        { id: 4, "fistName": "Eugenio", "lastName": "Smith", "email": "bob@gmail.com"},
-        { id: 5, "fistName": "Vanessa", "lastName": "Vivolo", "email": "bob@gmail.com"}      
+        { id: 1, "firstName": "Roberto", "lastName": "Za", "email": "bob@gmail.com"},
+        { id: 2, "firstName": "Guglielmo", "lastName": "Alberto", "email": "bob@gmail.com"},
+        { id: 3, "firstName": "Daniela", "lastName": "Foschieri", "email": "bob@gmail.com"},
+        { id: 4, "firstName": "Eugenio", "lastName": "Smith", "email": "bob@gmail.com"},
+        { id: 5, "firstName": "Vanessa", "lastName": "Vivolo", "email": "bob@gmail.com"}      
     ]);
 });
 

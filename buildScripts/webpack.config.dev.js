@@ -1,27 +1,19 @@
 import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   debug: true,
   devtool: 'inline-source-map',
   noInfo: false,
-  entry: {
-    vandor: path.resolve(__dirname, 'src/vendor'),
-    main: path.resolve(__dirname, 'src/index')
-  },
+  entry: [
+    path.resolve(__dirname, 'src/index')
+  ],
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'src'),
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [
-        // Create HTML file that includes reference to bundeld JS.
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: true
-    }),
-  ],
+  plugins: [],
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
