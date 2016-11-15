@@ -24,7 +24,7 @@ coverage
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-dist
+build/Release
 
 # Dependency directories
 node_modules
@@ -35,3 +35,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# mock db file
+db.json
+src/api/db.json
+
+# dist folder
+dist
