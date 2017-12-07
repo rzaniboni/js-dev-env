@@ -24,9 +24,23 @@ export const schema = {
           "email": {
             "type": "string",
             "faker": "internet.email",
-          }
+          },
+          "commessa": {
+            "type": "string",
+            "faker": "helpers.randomize",
+            "minLength": "20",
+            "maxLength": "20"
+            
+          },   
+          "indice": {
+            "type": "number"
+          },
+          "attivo": {
+            "type": "boolean"
+          }       
+
         },
-        required: ['id', 'firstName', 'lastName', 'email']
+        required: ['id', 'firstName', 'lastName', 'email', 'commessa', "indice", "attivo"]
       }
     }
   },
